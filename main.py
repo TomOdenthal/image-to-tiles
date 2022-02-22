@@ -77,7 +77,6 @@ class TileSectioningSetup:
         y1 = self.lost_px_top
         y2 = self.img_size_y - self.lost_px_bottom
         cropped_image = self.image[y1:y2, x1:x2]
-        # cv.imwrite("test.jpg", cropped_image)
         return cropped_image
 
     def cut_tiles(self):
@@ -120,7 +119,6 @@ if __name__ == "__main__":
 
     # create folder
     tss.target_dir = os.path.join(dir_path, image_name + "_tiles")
-
 
     tss.cut_tiles()
 
